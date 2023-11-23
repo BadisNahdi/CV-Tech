@@ -1,0 +1,15 @@
+<form action="post">
+    <p>name:</p>
+    <input [(ngModel)]="personne.name" [ngModelOptions]="{standalone: true}" type="text" class="form-control">
+    <p>firstname:</p>
+    <input [(ngModel)]="personne.firstname" [ngModelOptions]="{standalone: true}" type="text" class="form-control">
+    <p>cin:</p>
+    <input [(ngModel)]="personne.cin" [ngModelOptions]="{standalone: true}" type="number" class="form-control">
+    <p>age:</p>
+    <input [(ngModel)]="personne.age" [ngModelOptions]="{standalone: true}" type="number" class="form-control">
+    <p>job:</p>
+    <input [(ngModel)]="personne.job" [ngModelOptions]="{standalone: true}" type="text" class="form-control">
+    <p>image:</p>
+    <input [(ngModel)]="personne.path" [ngModelOptions]="{standalone: true}" type="text" class="form-control">
+    <button type="submit" class="btn btn-dangerd" (click)="sendevent()">Submit</button>
+</form>

@@ -21,6 +21,7 @@ export class CvComponent implements OnInit {
     this.personnes = [
       new Personne(1, 'Nahdi', 'Badis', 21, 14454192,'Student', '../../../assets/images/rotating_card_profile3.png'),
       new Personne(2, 'Haji', 'Houusem', 21, 14454192,'Student', '../../../assets/images/rotating_card_profile3.png'),
+      new Personne(3, 'Saadani', 'Abdelhkalek', 21, 14454192,'Student', ''),
     ];
   }
   selectPersonne(personne: any): void {

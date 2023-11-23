@@ -9,12 +9,13 @@ import { FormsModule } from '@angular/forms';
 import { CvComponent } from './cvTech/cv/cv.component';
 import { StyleComponent } from './directive/style/style.component';
 import { ClassComponent } from './directive/class/class.component';
+import { FormComponent } from './cvTech/form/form.component';
 // import { fa-regular fa-face-smile } from "@fortawesome/angular-fontawesome";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ChildAComponent, ChildBComponent, GrandChildComponent, ColorComponent, FormsModule, CvComponent, StyleComponent, ClassComponent],
+  imports: [CommonModule, RouterOutlet, ChildAComponent, ChildBComponent, GrandChildComponent, ColorComponent, FormsModule, CvComponent, StyleComponent, ClassComponent, FormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -24,6 +25,5 @@ export class AppComponent {
   show = false;
   ChangeStatus() {
     this.show = !this.show;
-    console.log(this.show);
   }
 }
