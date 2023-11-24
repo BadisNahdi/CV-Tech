@@ -1,0 +1,30 @@
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Text</span>
+    </div>
+    <input  [ngStyle]="{'color' : color,'backgroundColor':bgcolor,'font-size':size,'font-family':police}"  type="text" class="form-control" placeholder="text area" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="color"    >
+  </div>
+  
+  <div class="input-group mb-3">
+    <input #sizeIn type="number" class="form-control" placeholder="Text size" aria-label="Recipient's username" aria-describedby="basic-addon2" (change)="changesize(sizeIn.value)" >
+    <div class="input-group-append">
+      <span class="input-group-text" id="basic-addon2">put a number</span>
+    </div>
+  </div>
+  
+  
+  
+  <div class="input-group ">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Options</label>
+    </div>
+    <select  [(ngModel)]="police" class="custom-select" id="inputGroupSelect01">
+      <option selected>Choose text font</option>
+      <option   value="Arial">Arial</option>
+      <option value="cursive">cursive</option>
+      <option  value="Verdana">Verdana</option>
+      <option  value="ui-monospace">ui-monospace</option>
+    </select>
+  </div>
+  

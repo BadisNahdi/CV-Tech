@@ -45,6 +45,9 @@
       <li class="nav-item">
         <a class="nav-link" href="#" (click)="Rainbowfunc()">Rainbow</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" (click)="miniWordfunc()">Mini-Word</a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -54,3 +57,5 @@
 <app-form *ngIf="ViewForm" (addPersonne)="addCv($event)"></app-form>
 
 <app-class *ngIf="rainbow"></app-class>
+
+<app-mini-word *ngIf="miniWord"></app-mini-word>
