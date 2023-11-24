@@ -11,8 +11,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './fields.component.css'
 })
 export class FieldsComponent implements OnInit {
-
-  @Output() sendPersonne = new EventEmitter<Personne>();
+  @Output()
+  sendPersonne = new EventEmitter<Personne>();
   @Input() 
   personne!: Personne;
   ngOnInit(): void {

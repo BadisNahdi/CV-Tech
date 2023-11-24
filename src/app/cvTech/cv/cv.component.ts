@@ -13,16 +13,16 @@ import { Personne } from '../../Model/Personne';
   styleUrl: './cv.component.css'
 })
 export class CvComponent implements OnInit {
-  personnes: Personne[] = [];
+  
   selectedPersonne!: any;
 
+  @Input()
+  personnes!: Personne[];
+
+
+  
   
   ngOnInit(): void {
-    this.personnes = [
-      new Personne(1, 'Nahdi', 'Badis', 21, 14454192,'Student', '../../../assets/images/rotating_card_profile3.png'),
-      new Personne(2, 'Haji', 'Houusem', 21, 14454192,'Student', '../../../assets/images/rotating_card_profile3.png'),
-      new Personne(3, 'Saadani', 'Abdelhkalek', 21, 14454192,'Student', ''),
-    ];
   }
   selectPersonne(personne: any): void {
     this.selectedPersonne = personne;
