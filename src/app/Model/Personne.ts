@@ -6,7 +6,8 @@ export class Personne {
     cin: number;
     job: string;
     path: string;
-    constructor(id: number = 0, name: string = '', firstname: string = '', age: number = 0, cin: number = 0, job: string = '', path: string = '') {
+    description: string;
+    constructor(id: number = 0, name: string = '', firstname: string = '', age: number = 0, cin: number = 0, job: string = '', path: string = '', description='') {
         this.id = id;
         this.name = name;
         this.firstname = firstname;
@@ -14,5 +15,6 @@ export class Personne {
         this.cin = cin;
         this.job = job;
         this.path = path;
+        this.description = description
     }
 }

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Personne } from '../../Model/Personne';
 import { DefaultImagePipe } from '../default-image.pipe';
+import { EmbaucheService } from '../embauche.service';
 
 @Component({
   selector: 'app-detail-cv',
@@ -14,11 +15,13 @@ export class DetailCvComponent implements OnInit {
   @Input()
   personne!: Personne;
 
-
+  constructor(
+    private embaucheService: EmbaucheService,
+  ) { }
   ngOnInit(): void {
-    if (!this.personne) {
-      this.personne = new Personne(0, '', '', 0, 0, '', '');
-    }
+  }
+  embaucher(): void {
+    this.embaucheService.embaucher(this.personne);
   }
 
 }

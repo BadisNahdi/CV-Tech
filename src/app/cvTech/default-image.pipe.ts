@@ -6,11 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DefaultImagePipe implements PipeTransform {
 
-  transform(value: string, ...args: unknown[]): string {
+  transform(value: string): string {
     // return value ? value : "../../assets/images/anonymous.png";
-    if (!value) {
-      return "../../../assets/images/tim_logo.png";
-      console.log("\n\n\nvalue is null");
+    if (!value.trim()) {
+      return "assets/images/tim_logo.png";
     }
     return value;
   }

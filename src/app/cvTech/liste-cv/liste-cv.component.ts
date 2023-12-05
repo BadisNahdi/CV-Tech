@@ -11,14 +11,14 @@ import { Personne } from '../../Model/Personne';
   styleUrl: './liste-cv.component.css'
 })
 export class ListeCvComponent implements OnInit {
-  @Input()
-  personnes!: Personne[];
+  @Input({required: true})
+  personnes: Personne[] = [];
   
   @Output()
-  selectedPersonne = new EventEmitter();
+  selectedPersonne = new EventEmitter<Personne>();
   ngOnInit(): void {
   }
-  selectPersonne(selectedPersonne:any): void {
+  selectPersonne(selectedPersonne: Personne): void {
     this.selectedPersonne.emit(
       selectedPersonne
     );

@@ -1,30 +1,22 @@
-
-<div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon1">Text</span>
-    </div>
-    <input  [ngStyle]="{'color' : color,'backgroundColor':bgcolor,'font-size':size,'font-family':police}"  type="text" class="form-control" placeholder="text area" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="color"    >
-  </div>
-  
-  <div class="input-group mb-3">
-    <input #sizeIn type="number" class="form-control" placeholder="Text size" aria-label="Recipient's username" aria-describedby="basic-addon2" (change)="changesize(sizeIn.value)" >
-    <div class="input-group-append">
-      <span class="input-group-text" id="basic-addon2">put a number</span>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <input type="text" [ngStyle]="{'color': selectedColor, 'font-size': fontSize + 'px', 'font-family': fontFamily}" style="border: none;">
     </div>
   </div>
-  
-  
-  
-  <div class="input-group ">
-    <div class="input-group-prepend">
-      <label class="input-group-text" for="inputGroupSelect01">Options</label>
+  <div class="row mt-2 mb-2">
+    <div appRainbow class="col-sm">
+      <input appRainbow type="color" class="form-control" [(ngModel)]="selectedColor" />
     </div>
-    <select  [(ngModel)]="police" class="custom-select" id="inputGroupSelect01">
-      <option selected>Choose text font</option>
-      <option   value="Arial">Arial</option>
-      <option value="cursive">cursive</option>
-      <option  value="Verdana">Verdana</option>
-      <option  value="ui-monospace">ui-monospace</option>
-    </select>
+    <div class="col-sm">
+      <input type="number" class="form-control" [(ngModel)]="fontSize" />
+    </div>
+    <div class="col-sm">
+      <select class="form-control" [(ngModel)]="fontFamily">
+        <option value="verdana">Verdana</option>
+        <option value="arial">Arial</option>
+        <option value="times new roman">Times New Roman</option>
+      </select>
+    </div>
   </div>
-  
+</div>

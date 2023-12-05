@@ -11,5 +11,7 @@
     <input [(ngModel)]="personne.job" [ngModelOptions]="{standalone: true}" type="text" class="form-control">
     <p>image:</p>
     <input [(ngModel)]="personne.path" [ngModelOptions]="{standalone: true}" type="text" class="form-control">
+    <p>description:</p>
+    <input [(ngModel)]="personne.description" [ngModelOptions]="{standalone: true}" type="text" class="form-control">
     <button type="submit" class="btn btn-dangerd" (click)="sendevent()">Submit</button>
 </form>
